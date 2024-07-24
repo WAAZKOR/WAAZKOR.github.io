@@ -3,6 +3,7 @@ header h1 {
     font-size: larger;
     color: darkgray;
     display: block;
+    position: relative;
     background-color: blueviolet;
     
 }
