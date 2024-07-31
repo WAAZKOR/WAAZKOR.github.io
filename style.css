@@ -1,13 +1,16 @@
+
+
 header h1 {
     font-family:'Times New Roman', Times, serif;
     font-size: larger;
     color: darkgray;
     display: block;
-    position: relative;
-    background-color: blueviolet;
+    background-color: midnightblue;
     
 }
 navbar {
-    position: fixed;
+    position: relative;
     display: inline-block;
+    height: 50px;
+    width: fit-content;
 }
