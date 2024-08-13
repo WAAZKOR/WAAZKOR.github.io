@@ -56,6 +56,7 @@ nav li {
     grid-area: 3 / 1 / 4 / 2;
     background-color: rgb(34, 33, 33); /* Example color */
     padding: 20px;
+    color: whitesmoke
 }
 
 .right-rectangle {
@@ -68,7 +69,7 @@ nav li {
     overflow-y: auto;
 }
 
-.item1, .item2, .item3, .item4, .item5, .item6 {
+.item {
     background-color: #eee; /* Example color */
     max-width: 100%;
     max-height: 100%;
@@ -77,7 +78,7 @@ nav li {
     text-align: center;
 }
 
-.item1 {
+.item.item1 {
     grid-area: 1 / 1 / 2 / 2; /* Adjust for position */
 }
 
@@ -85,23 +86,23 @@ nav li {
     grid-area: 1 / 2 / 2 / 3; /* Adjust for position */
 }
 
-.item3 {
+.item.item3 {
     grid-area: 1 / 3 / 2 / 4; /* Adjust for position */
 }
 
-.item4 {
+.item.item4 {
     grid-area: 2 / 1 / 3 / 2; /* Adjust for position */
 }
 
-.item5 {
+.item.item5 {
     grid-area: 2 / 2 / 3 / 3; /* Adjust for position */
 }
 
-.item6 {
+.item.item6 {
     grid-area: 2 / 3 / 3 / 4; /* Adjust for position */
 }
 
-.item1 img, .item2 img, .item3 img, .item4 img, .item5 img, .item6 img {
+.item img {
     width: 100%; /* Set width to 100% of the container */
     height: auto; /* Let height adjust automatically to maintain aspect ratio */
 }

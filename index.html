@@ -24,18 +24,31 @@
         </nav>
          <div class="left-rectangle">
              <h2>Featured Project</h2>
-             <p>This is where a description of the project being highlighted will go</p>
+             <p id="description">Hover over a project to see its description.</p>
          </div>
     
          <div class="right-rectangle">
-             <div class="item1"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 1"></a></div>
-             <div class="item2"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 2"></a></div>
-             <div class="item3"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 3"></a></div>
-             <div class="item4"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 4"></a></div>
-             <div class="item5"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 5"></a></div>
-             <div class="item6"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 6"></a></div>
+             <div class="item" id="item1" data-description="Description for Project 1"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 1"></a></div>
+             <div class="item" id="item2" data-description="Description for Project 2"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 2"></a></div>
+             <div class="item" id="item3" data-description="Description for Project 3"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 3"></a></div>
+             <div class="item" id="item4" data-description="Description for Project 4"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 4"></a></div>
+             <div class="item" id="item5" data-description="Description for Project 5"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 5"></a></div>
+             <div class="item" id="item6" data-description="Description for Project 6"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="Project 6"></a></div>
          </div>
-        
+         <script>
+            const items = document.querySelectorAll('.item');
+            const description = document.getElementById('description');
+    
+            items.forEach(item => {
+                item.addEventListener('mouseover', () => {
+                    description.textContent = item.getAttribute('data-description');
+                });
+    
+                item.addEventListener('mouseout', () => {
+                    description.textContent = 'Hover over a project to see its description.'; 
+                });
+            });
+        </script>
         <footer>
             <p>&copy; 2024 Chris Korsikas</p>
         </footer>
