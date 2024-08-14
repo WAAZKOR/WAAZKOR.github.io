@@ -1,1 +1,42 @@
-#map { height: 180px; }
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-container input {
+  width: 100%;
+  padding:   
+ 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
