@@ -1,9 +1,37 @@
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaflet Map with Coordinate Input and Bearing Lines</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
- <!-- Make sure you put this AFTER Leaflet's CSS -->
- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
- <div id="map"></div>
+  <div class="container">
+    <h1>My Leaflet Map</h1>
+
+    <div class="input-container">
+      <label for="latitude">Latitude:</label>
+      <input type="text" id="latitude" placeholder="Enter latitude">
+    </div>
+
+    <div class="input-container">
+      <label for="longitude">Longitude:</label>
+      <input type="text" id="longitude" placeholder="Enter longitude">
+    </div>
+
+    <div class="input-container">
+      <label for="bearing">Bearing (degrees):</label>
+      <input type="text" id="bearing" placeholder="Enter bearing">
+    </div>
+
+    <button onclick="drawLine()">Draw Line</button>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
