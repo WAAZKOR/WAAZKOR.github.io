@@ -1,4 +1,4 @@
-var map = L.map("map").setView([32.253460, -110.911789], 13);
+var map = L.map("map").setView([32.2540, -110.9742], 13);
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -20,6 +20,22 @@ function drawLine() {
   var endPoint = calculateDestinationPoint(startPoint, 10000, bearing); // 10 km for example
 
   L.polyline([startPoint, endPoint], { color: "red" }).addTo(map);
+}
+
+function drawLine2() {
+  var lat2 = parseFloat(document.getElementById("latitude2").value);
+  var lng2 = parseFloat(document.getElementById("longitude2").value);
+  var bearing2 = parseFloat(document.getElementById("bearing2").value);
+
+  if (isNaN(lat2) || isNaN(lng2) || isNaN(bearing2)) {
+    alert("Please enter valid coordinates and bearing.");
+    return;
+  }
+
+  var startPoint2 = L.latLng(lat2, lng2);
+  var endPoint2 = calculateDestinationPoint(startPoint2, 10000, bearing2); // 10 km for example
+
+  L.polyline([startPoint2, endPoint2], { color: "blue" }).addTo(map);
 }
 
 // Function to calculate the destination point
