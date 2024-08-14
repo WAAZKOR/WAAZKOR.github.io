@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-  <title>Leaflet Map with Coordinate Input and Bearing Lines</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>CodePen - Simple map with leaflet.js</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'><link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+
 </head>
 <body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <h1>Triangulate</h1>
 
-  <div class="container">
-    <h1>My Leaflet Map</h1>
-
-    <div class="input-container">
-      <label for="latitude">Latitude:</label>
-      <input type="text" id="latitude" placeholder="Enter latitude">
-    </div>
-
-    <div class="input-container">
-      <label for="longitude">Longitude:</label>
-      <input type="text" id="longitude" placeholder="Enter longitude">
-    </div>
-
-    <div class="input-container">
-      <label for="bearing">Bearing (degrees):</label>
-      <input type="text" id="bearing" placeholder="Enter bearing">
-    </div>
-
-    <button onclick="drawLine()">Draw Line</button>
-
-    <div id="map"></div>
+  <div class="input-container">
+    <label for="latitude">Latitude:</label>
+    <input type="text" id="latitude" placeholder="Enter latitude">
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="leaflet.js"></script>
+  <div class="input-container">
+    <label for="longitude">Longitude:</label>
+    <input type="text" id="longitude" placeholder="Enter longitude">
+  </div>
+
+  <div class="input-container">
+    <label for="bearing">Bearing (degrees):</label>
+    <input type="text" id="bearing" placeholder="Enter bearing">
+  </div>
+ 
+  <button onclick="drawLine()">Draw Line 1</button>
+  <div class="input-container">
+    <label for="latitude2">Latitude 2:</label>
+    <input type="text" id="latitude2" placeholder="Enter latitude">
+  </div>
+  
+  <div class="input-container">
+    <label for="longitude2">Longitude 2:</label>
+    <input type="text" id="longitude2" placeholder="Enter longitude">
+  </div>
+  
+  <div class="input-container">
+    <label for="bearing2">Bearing 2 (degrees):</label>
+    <input type="text" id="bearing2" placeholder="Enter bearing">
+  </div>
+  
+  <button onclick="drawLine2()">Draw Line 2</button>
+  
+
+  <div id="map"></div>
+</div>
+<!-- partial -->
+<script src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js'></script>
+<script  src="./script.js"></script>
 
 </body>
 </html>
