@@ -17,7 +17,7 @@ function drawLine() {
   }
 
   var startPoint = L.latLng(lat, lng);
-  var endPoint = calculateDestinationPoint(startPoint, 10000, bearing); // 10 km for example
+  var endPoint = calculateDestinationPoint(startPoint, 10000000, bearing); // 10 km for example
 
   L.polyline([startPoint, endPoint], { color: "red" }).addTo(map);
 }
