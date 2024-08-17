@@ -1,10 +1,11 @@
 var map = L.map('map').setView([32.2540, -110.9742], 13);
+L.tileLayer.provider('USGS.USImageryTopo').addTo(map);
 
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 19,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+///L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+//  maxZoom: 19,
+//  attribution:
+//    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//}).addTo(map);
 
 function drawLine() {
   var lat = parseFloat(document.getElementById("latitude").value);
